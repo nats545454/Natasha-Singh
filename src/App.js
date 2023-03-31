@@ -1,20 +1,17 @@
 import "./App.css";
-import Home from "./Components/Home";
-import About from "./Components/About";
-import Work from "./Components/Work";
-import Testimonial from "./Components/Testimonial";
-import Contact from "./Components/Contact";
-import Footer from "./Components/Footer";
+import Homee from "./pages/Homee";
+import SignUp from "./pages/SignUp";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <About />
-      <Work />
-      <Testimonial />
-      <Contact />
-      <Footer />
+      <Router>
+        <Routes>
+			  	<Route exact path="/" element={<Homee/>}/>
+          <Route exact path="/SignUp" element={<SignUp/>} />
+			  </Routes>
+    </Router>
     </div>
   );
 }
